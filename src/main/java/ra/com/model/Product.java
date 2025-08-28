@@ -19,16 +19,13 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "product_name", columnDefinition = "varchar (50)", nullable = false,unique = true)
-    @NotEmpty(message = "tên sản phẩm không được để trống")
     private String productName;
-    @Column(name = "price", columnDefinition = "double check (price > 0", nullable = false)
-    @NotEmpty(message = "Giá sản phẩm không được để trống")
+    @Column(name = "price", columnDefinition = "double check (price > 0)", nullable = false)
     private Double price;
-    @Column(name = "stock", columnDefinition = "int check (stock >=0)",nullable = false)
-    @NotEmpty(message = "Tồn kho không được để trống")
+    @Column(name = "stock", columnDefinition = "int check (stock >0)",nullable = false)
     private int stock;
     @Column(name = "image",nullable = false )
-    @NotEmpty(message = "ảnh không được để trống")
-    private String image;
-    o
+    private String imageUrl;
+    @Column (name = "status", columnDefinition = "bit default(1)")
+    private boolean status;
 }

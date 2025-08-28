@@ -12,6 +12,8 @@
 </head>
 <body>
 <h1>Welcome to my Page</h1>
+
+<a href="products">Quản lý danh sách sản phẩm</a>
 <a href="logout"> Đăng xuất</a>
 </body>
 </html>
